@@ -1,3 +1,16 @@
+/*
+
+TP 01-  CALCULADORA
+HECHO POR: CARLOS FELIPE M. HENRIQUES
+EMAIL: CFMH1985@GMAIL.COM
+UTN FRA - TSP
+PROGRAMACION/LABORATORIO 01
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
 /** \brief Suma los dos numeros ingresados por el usuario
  * \param X = primero numero ingresado por el usuario
  * \param Y = segundo numero ingresado por el usuario
@@ -8,7 +21,8 @@ int suma(int x, int y)
 {
  int resultado;
  resultado=x+y;
- printf("\n\n*Resultado: %d*\n", resultado);
+ printf("\nSuma: %d", resultado);
+ return resultado;
 }
 
 /** \brief Resta el segundo numero ingresado del primero
@@ -20,7 +34,8 @@ int resta(int x, int y)
 {
  int resultado;
  resultado=x-y;
- printf("\n\n*Resultado: %d*\n", resultado);
+ printf("\nResta: %d", resultado);
+ return resultado;
 }
 
 /** \brief Divide los 2 numeros ingresados por el usuario
@@ -32,7 +47,8 @@ int division(int x, int y)
 {
  float resultado;
  resultado=x/(float)y;
- printf("\n\n*Resultado: %.2f*\n", resultado);
+ printf("\nDivision: %.2f", resultado);
+ return resultado;
 }
 
 /** \brief Multiplica dos numeros ingresados por el usuario
@@ -44,7 +60,8 @@ int multiplicacion(int x, int y)
 {
  int resultado;
  resultado=x*y;
- printf("\n\n*Resultado: %d*\n", resultado);
+ printf("\nMultiplicacion: %d", resultado);
+ return resultado;
 }
 
 /** \brief Calcula el factorial del numero ingresado por el usuario
@@ -54,11 +71,17 @@ int multiplicacion(int x, int y)
 int factorial(int x)
 {
  int fact=x, aux=x-1;
- int resultado;
- while(aux>=1)
- {
-  fact=fact*aux;
-  aux--;
- }
- printf("\n*%d! = %d*\n", x, fact);
+ if(x==0)
+    {
+        printf("\n%d! = 1\n");
+    }else
+    {
+
+        while(aux>=1)
+        {
+            fact=fact*aux;
+            aux--;
+        }
+            printf("\n%d! = %d\n\n", x, fact);
+    }
 }
